@@ -43,5 +43,41 @@ class CompleteBinaryTreeTest {
         assertEquals(tree.toString(), "1 2 4 ", "Deleting 3 should return '1 2 4'");
     }
 
+    @Test
+    void isMaxHeap(){
+        CompleteBinaryTree tree = new CompleteBinaryTree();
+        tree.insert(10);
+        tree.insert(9);
+        tree.insert(8);
+        tree.insert(7);
+        tree.insert(6);
+        assertTrue(tree.question1(), "Tree1 should satisfy max-heap property");
+    }
+
+    void isMaxHeap2(){
+        CompleteBinaryTree tree = new CompleteBinaryTree();
+        tree.insert(10);
+        tree.insert(20); //break ahi thase 
+        tree.insert(8);
+        tree.insert(7);
+        tree.insert(6);
+        assertTrue(tree.question1(), "Tree should satisfy max-heap property");
+    }
+
+    @Test
+    //incomplete 
+    void cloneTree(){
+        CompleteBinaryTree tree = new CompleteBinaryTree();
+        tree.insert(15);
+        tree.insert(10);
+        tree.insert(20); 
+        tree.insert(5);
+        tree.insert(12);
+        tree.insert(18);
+        tree.insert(30);
+
+        //should match the original tree 
+
+    }
 
 }
